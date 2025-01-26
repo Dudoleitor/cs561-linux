@@ -965,6 +965,8 @@ asmlinkage long sys_lsm_set_self_attr(unsigned int attr, struct lsm_ctx *ctx,
 				      size_t size, __u32 flags);
 asmlinkage long sys_lsm_list_modules(u64 *ids, size_t *size, u32 flags);
 
+asmlinkage long sys_s2_encrypt(char __user *input, int key);
+
 /*
  * Architecture-specific system calls
  */

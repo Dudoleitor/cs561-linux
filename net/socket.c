@@ -1994,6 +1994,8 @@ int __sys_accept4(int fd, struct sockaddr __user *upeer_sockaddr,
 	int ret = -EBADF;
 	struct fd f;
 
+	printk(KERN_INFO "accept4: fd %d\n", fd);
+
 	f = fdget(fd);
 	if (f.file) {
 		ret = __sys_accept4_file(f.file, upeer_sockaddr,

@@ -3,7 +3,7 @@ QEMU_BIN=qemu-system-x86_64
 NCPU=2
 MEMSIZE=2G
 
-KNL_SRC=./linux
+KNL_SRC=.
 BZIMAGE=${KNL_SRC}/arch/x86/boot/bzImage
 CMDLINE="nokaslr console=ttyS0 root=/dev/sda1 rw debug"
 

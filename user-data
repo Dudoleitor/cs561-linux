@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: edoardo
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICu00KvBjTQE+4KQDgmipoGsR+L8O62bNTgPaEHU46WU edoardo-mk2
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: sudo
+    shell: /bin/bash
+chpasswd:
+  list: |
+    edoardo:letmein
+  expire: False
